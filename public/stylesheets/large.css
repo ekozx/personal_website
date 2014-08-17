@@ -1,0 +1,22 @@
+/* General Elements */
+body {
+  background-image: url('../images/bathing.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+/* Classes */
+.container {
+  background-color: white;
+  opacity: 0.8;
+}
+.navbar {
+}
+.navbar > li {
+  display: inline;
+  font-size: 28px;
+  padding-left: 15px;
+}
+.top {
+  padding-top: 5%;
+}
