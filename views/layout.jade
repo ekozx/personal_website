@@ -10,9 +10,11 @@ html
     .top
       .intro
         h1: a(href='/') Evan Kozliner
-        p.intro-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        p.intro-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
       ul.navbar
-        li: a(href='/') projects
-        li: a(href='resume')  resume
-        li: a(href='blog') blog
+        li: a(href='/', id='root') projects
+        li: a(href='resume', id='resume')  resume
+        li: a(href='blog', id='blog') blog
     block content
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(src="/javascripts/misc.js")

@@ -1,6 +1,7 @@
 /* General Elements */
 a {
   color: #00B7FF;
+  text-decoration: none;
 }
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -16,7 +17,25 @@ h1 {
   margin-top: 0;
   margin-bottom: 0;
 }
+p {
+  font-size: 1.5em;
+}
 /* Classes */
+.active {
+  padding-bottom: 1.3em;
+  position: relative;
+}
+.active:after {
+  height: .15em;
+  bottom: 0;
+  left: 0;
+  margin-left: 0;
+  background: #029CD4;
+  border-radius: 5em;
+  position: absolute;
+  content: "";
+  width: 100%;
+}
 .container {
   margin: 0 auto;
   width: 80%;
