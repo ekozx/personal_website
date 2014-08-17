@@ -5,11 +5,21 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/small.css', media='(max-width: 1000px)')
     link(rel='stylesheet', href='/stylesheets/large.css', media="(max-width: 1500px)")
+    link(rel='stylesheet', href='/stylesheets/ionicons.min.css')
   body
   .container
     .top
       .intro
-        h1: a(href='/') Evan Kozliner
+        h1.title: a(href='/') Evan Kozliner
+        ul.social-media
+          li: a(href='https://twitter.com/evankozliner')
+            span.ion-social-twitter
+          li: a(href='http://www.linkedin.com/pub/evan-kozliner/62/422/40a')
+            span.ion-social-linkedin
+          li: a(href='https://github.com/ekozx')
+            span.ion-social-github
+          li: a(href='/resume')
+            span.ion-ios7-email
         p.intro-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
       ul.navbar
         li: a(href='/', id='root') projects

@@ -12,10 +12,12 @@ body {
 }
 .navbar {
 }
-.navbar > li {
+.navbar > li, .social-media > li {
   display: inline;
-  font-size: 28px;
   padding-left: 15px;
+  font-size: 28px;
+}
+.navbar > li {
 }
 .top {
   padding-top: 5%;
