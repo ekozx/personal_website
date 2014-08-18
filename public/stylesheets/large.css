@@ -7,8 +7,6 @@ body {
 }
 /* Classes */
 .container {
-  background-color: white;
-  opacity: 0.8;
 }
 .navbar {
 }
@@ -19,6 +17,6 @@ body {
 }
 .navbar > li {
 }
-.top {
+.display {
   padding-top: 5%;
 }

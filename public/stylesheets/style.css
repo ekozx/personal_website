@@ -4,7 +4,7 @@ a {
   text-decoration: none;
 }
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -14,6 +14,7 @@ ul {
   padding: 0;
 }
 h1 {
+  font-size: 1em;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -38,9 +39,17 @@ p {
 }
 .container {
   margin: 0 auto;
-  width: 85%;
-  background-color: white;
-  opacity: .8;
+  width: 100%;
+}
+.description {
+  float: right;
+  width: 50%;
+}
+.header {
+  font-size: 2em;
+  margin-left: 3.5%;
+  margin-top: 5%;
+  width: 100%;
 }
 .intro {
   position: relative;
@@ -52,22 +61,48 @@ p {
 .intro-text {
   line-height: 1.5em;
 }
+.left-nav {
+  margin-top: 150px;
+  margin-left: 5%;
+}
+.me-link {
+  margin-left: 12.5%;
+  margin-top: 3%;
+  z-index: 1;
+  position: absolute;
+}
+.me-img {
+  border-radius: 50%;
+  margin-left: 50%;
+  display: inline;
+  margin: auto;
+  height: 150px;
+  width: 150px;
+}
 .navbar {
-  width: 50%;
   color: white;
 }
-.navbar, .social-media {
+.navbar {
+  padding-bottom: 10%;
+  margin-left: 5%;
   position: relative;
   box-sizing: border-box;
   display: inline-block;
   text-align: right;
 }
+.resume {
+  width: 80%;
+  background-color: white;
+  opacity: 1 !important;
+
+}
 .title {
   display: inline;
 }
-.top {
-  padding-right: 5%;
-  padding-left: 5%;
+.display {
+  padding-bottom: 5%;
+  background-color: white;
+  opacity: .8;
   display: block;
   text-align: left;
   text-rendering: optimizespeed;
