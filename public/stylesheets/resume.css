@@ -1,0 +1,19 @@
+.resume {
+  width: 75%;
+  background-color: white;
+  opacity: .9;
+  margin: auto;
+}
+.resume > h1, .resume > h2, .resume > h3, .resume > ul {
+  margin-left: 5%;
+}
+.resume-list {
+  margin-top: 3%;
+  text-align: center;
+  display: inline-block;
+}
+.resume-list > li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 1.2em;
+}

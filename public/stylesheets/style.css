@@ -47,9 +47,7 @@ p {
 }
 .header {
   font-size: 2em;
-  margin-left: 3.5%;
   margin-top: 5%;
-  width: 100%;
 }
 .intro {
   position: relative;
@@ -63,7 +61,7 @@ p {
 }
 .left-nav {
   margin-top: 150px;
-  margin-left: 5%;
+  margin-left: 15%;
 }
 .me-link {
   margin-left: 12.5%;
@@ -90,12 +88,6 @@ p {
   display: inline-block;
   text-align: right;
 }
-.resume {
-  width: 80%;
-  background-color: white;
-  opacity: 1 !important;
-
-}
 .title {
   display: inline;
 }
@@ -105,5 +97,5 @@ p {
   opacity: .8;
   display: block;
   text-align: left;
-  text-rendering: optimizespeed;
+  text-rendering: optimizespeed30px
 }
