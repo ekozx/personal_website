@@ -19,7 +19,7 @@ h1 {
   margin-bottom: 0;
 }
 p {
-  font-size: 1.5em;
+
 }
 /* Classes */
 .active {
@@ -57,6 +57,7 @@ p {
   width: 50%;
 }
 .intro-text {
+  font-size: 1.5em;
   line-height: 1.5em;
 }
 .left-nav {
