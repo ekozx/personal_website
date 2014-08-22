@@ -28,6 +28,11 @@
   width: 90px;
   height: 90px;
 }
+.resume-img-volunteer {
+  margin-left: 40px;
+  width: 100px;
+  height: 75px;
+}
 .img-circle {
   border-radius: 150px;
 }
