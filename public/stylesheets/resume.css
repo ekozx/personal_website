@@ -1,3 +1,7 @@
+.col-half {
+  width: 50%;
+  display: inline-block;
+}
 .tab {
   margin-left: 10%;
 }
@@ -6,22 +10,42 @@
   background-color: white;
   opacity: .9;
   margin: auto;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+  border: solid;
 }
 .resume > h1, .resume > h2, .resume > h3, .resume > ul {
   margin-left: 5%;
 }
+.resume > h1 {
+  /*padding-top: 5%;*/
+}
 .resume-img {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
+}
+.resume-img-lg {
+  width: 90px;
+  height: 90px;
+}
+.img-circle {
   border-radius: 150px;
 }
-.resume-list {
-  margin-top: 3%;
-  text-align: center;
+.info {
+  padding-left: 10%;
+}
+.resume-img-list {
+  float: left;
+}
+.resume-list, .resume-img-list {
+  margin-top: 2%;
   display: inline-block;
 }
-.resume-list > li {
+.resume-list > li, .resume-img-list > li {
   display: inline;
   margin-right: 20px;
   font-size: 1.2em;
+}
+.col-all {
+  width: 100%;
 }

@@ -1,5 +1,6 @@
 /* General Elements */
 body {
+  background-size: auto !important;
 }
 /* Classes */
 .navbar {
