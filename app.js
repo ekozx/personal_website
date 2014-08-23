@@ -4,7 +4,9 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var mongoose = require('mongoose');
+var passport = require('passport')
+  , LocalStrategy = require('passport-local').Strategy;
 var app = express();
 
 // view engine setup
@@ -18,18 +20,8 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 //routes:
-app.get('/', function(req, res) {
-  res.render('index', { title: 'evan kozliner' });
-});
-app.get('/resume', function(req, res) {
-  res.render('resume');
-});
-app.get('/blog', function(req, res) {
-  res.render('blog');
-});
-
+require('./routes.js')(app);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -62,5 +54,19 @@ app.use(function(err, req, res, next) {
     });
 });
 
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    User.findOne({ username: username }, function(err, user) {
+      if (err) { return done(err); }
+      if (!user) {
+        return done(null, false, { message: 'Incorrect username.' });
+      }
+      if (!user.validPassword(password)) {
+        return done(null, false, { message: 'Incorrect password.' });
+      }
+      return done(null, user);
+    });
+  }
+));
 
 module.exports = app;
