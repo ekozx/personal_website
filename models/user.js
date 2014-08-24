@@ -6,5 +6,9 @@ var userSchema = mongoose.Schema({
   password: String
 });
 
-accountSchema.plugin(passportLocalMongoose);
+userSchema.methods.validPassword = function(pwd) {
+  return (this.password === pwd);
+}
+
+userSchema.plugin(passportLocalMongoose);
 module.exports = mongoose.model('User', userSchema);

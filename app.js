@@ -5,8 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var passport = require('passport')
-  , LocalStrategy = require('passport-local').Strategy;
+var passport = require('passport');
 var app = express();
 
 // view engine setup
@@ -19,9 +18,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
+app.use(passport.session());
 
 //routes:
-require('./routes.js')(app);
+require('./routes.js')(app, passport);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -30,18 +31,34 @@ app.use(function(req, res, next) {
     next(err);
 });
 
+// //Fixture data
+// Post.find(function(err, posts) {
+//   if (posts.length) return;
+//   new Post({
+//     title: 'Hello World!',
+//     subtitle: 'Welcome to my little corner of the web!',
+//     body: 'I created this site for a couple reasons. First, I wanted to have a place where I could write about web development. By writing weekly posts about interesting things I learn in web dev, I\'ll be able to track my progress as a developer. Second, I wanted to make a site using [ember.js](http://emberjs.com/) to gain experience working with the framework. Some of you might be wondering "why on earth would he use a front-end javascript framework for a simple personal site!?". Well, I did and I didn\'t. I used ember to make a content management system for this blog; the actual blog portion of this site does not use ember. If you would like to see a a simplified version of the ember app, check out the [post archive](http://wilfreddenton.com/archive). You can find code for the full ember app on [Github](https://github.com/wilfreddenton/wilfreddenton.com).',
+//     created_at: new Date('2014-05-21 17:55:49.000000'),
+//     updated_at: new Date('2014-05-26 17:09:30.216780'),
+//     published: true
+//   }).save();
+// });
+
+
 /// error handlers
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
-    });
+switch(app.get('env')) {
+  case 'development':
+    mongoose.connect('mongodb://localhost/test');
+    break;
+  // TODO: Create and add credentials file to gitignore 
+  case 'production':
+    mongoose.connect(credentials.mongo.connectionString);
+    break;
+  default:
+    throw new Error('Unknown execution environment: ' + app.get('env'));
 }
 
 // production error handler
@@ -53,20 +70,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
-passport.use(new LocalStrategy(
-  function(username, password, done) {
-    User.findOne({ username: username }, function(err, user) {
-      if (err) { return done(err); }
-      if (!user) {
-        return done(null, false, { message: 'Incorrect username.' });
-      }
-      if (!user.validPassword(password)) {
-        return done(null, false, { message: 'Incorrect password.' });
-      }
-      return done(null, user);
-    });
-  }
-));
 
 module.exports = app;
