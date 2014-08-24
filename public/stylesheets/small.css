@@ -6,3 +6,7 @@ body {
 .navbar {
   font-size: 45px;
 }
+.display {
+  height: 60%;
+  padding-bottom: 15%;
+}
