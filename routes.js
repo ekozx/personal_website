@@ -3,9 +3,11 @@ var blog = require('./controllers/blogController.js');
 var projects = require('./controllers/projectsController.js');
 var admin = require('./controllers/adminController.js');
 
-module.exports = function(app, passport) {
+module.exports = function(app, passport, express) {
   var LocalStrategy = require('passport-local').Strategy;
   var User = require('./models/user.js')
+  var adminRouter = express.Router();
+  app.use(require('vhost')('/admin', adminRouter));
   passport.use(new LocalStrategy(User.authenticate()));
 
   passport.serializeUser(User.serializeUser());
@@ -14,12 +16,19 @@ module.exports = function(app, passport) {
   app.get('projects', projects.index);
   app.get('/resume', resume.index);
   app.get('/blog', blog.index);
-  app.get('/login', admin.login);
-  app.post('/login', passport.authenticate('local', {
-    successRedirect: '/new',
-    failureRedirect: '/login'
+  adminRouter.get('/', function(req, res) {
+  if (req.user) {
+    res.sendfile('/');
+  } else {
+    res.redirect('/login');
   }
-  ));
+});
+  // adminRouter.get('/admin/login', admin.login);
+  // adminRouter.post('/admin/login', passport.authenticate('local', {
+  //   successRedirect: '/new',
+  //   failureRedirect: '/login'
+  // }
+  // ));
 }
 
 // passport.use(new LocalStrategy(function(username, password, done) {

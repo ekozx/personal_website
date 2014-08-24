@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
+var http = http = require('http');
 var app = express();
 
 // view engine setup
@@ -21,8 +22,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.set('port', process.env.PORT || 3000);
+
 //routes:
-require('./routes.js')(app, passport);
+require('./routes.js')(app, passport, express);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -53,7 +56,7 @@ switch(app.get('env')) {
   case 'development':
     mongoose.connect('mongodb://localhost/test');
     break;
-  // TODO: Create and add credentials file to gitignore 
+  // TODO: Create and add credentials file to gitignore
   case 'production':
     mongoose.connect(credentials.mongo.connectionString);
     break;
@@ -72,3 +75,8 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+var server = http.createServer(app).listen(app.get('port'), function() {
+  console.log( 'Home started in ' + app.get('env') +
+    ' mode on ' + app.get('port'));
+});
