@@ -37,6 +37,21 @@ p {
   content: "";
   width: 100%;
 }
+figure {
+  margin: 0;
+  position:absolute;
+  opacity: .99;
+  background-image: url('../images/sakura.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  background-size: cover;
+  -webkit-filter: blur(13px);
+  -moz-filter: blur(13px);
+  -o-filter: blur(13px);
+  -ms-filter: blur(13px);
+  filter: blur(13px);
+}
 .container {
   margin: 0 auto;
   width: 100%;

@@ -2,6 +2,19 @@
 body {
   background-size: auto !important;
 }
+figure {
+  height: 2000px;
+}
+@media all and (max-width: 780px) {
+  figure {
+    height: 2100px;
+  }
+}
+@media all and (max-width: 720px) {
+  figure {
+    height: 2200px;
+  }
+}
 /* Classes */
 .navbar {
   font-size: 45px;

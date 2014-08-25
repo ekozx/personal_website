@@ -1,13 +1,15 @@
 /* General Elements */
 body {
-  background-image: url('../images/sakura.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100%;
+}
+figure {
+  height: 1800px;
 }
 @media all and (max-width: 1190px) {
   body {
     background-size: auto;
+  }
+  figure {
+    height: 1800px;
   }
 }
 /* Classes */

@@ -21,4 +21,9 @@ exports.createUser = function(req, res) {
 exports.createPost = function(req, res) {
   var Post = require('../models/post.js');
   console.log(req.body.post);
+  //TODO: I was here last
+  var post = new Post({
+    title: req.body.post.title,
+
+  });
 };
