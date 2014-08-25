@@ -7,6 +7,7 @@ var userSchema = mongoose.Schema({
 });
 
 userSchema.methods.validPassword = function(pwd) {
+  console.log((this.password === pwd));
   return (this.password === pwd);
 }
 

@@ -6,8 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
-var http = http = require('http');
+var http = require('http');
 var app = express();
+var session = require('express-session');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -18,6 +19,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
+// app.use(session);
+// TODO: Make a file for the secret
+app.use(session({secret: "mySecret", saveUninitialized: true, resave: true}));
+// app.use(express.session({ secret: 'keyboard cat' }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -54,7 +59,7 @@ app.use(function(req, res, next) {
 // will print stacktrace
 switch(app.get('env')) {
   case 'development':
-    mongoose.connect('mongodb://localhost/test');
+    mongoose.connect('mongodb://localhost/personalSite');
     break;
   // TODO: Create and add credentials file to gitignore
   case 'production':
