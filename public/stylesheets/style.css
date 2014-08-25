@@ -74,7 +74,7 @@ figure {
 .intro-text {
   margin-right: 10%;
   padding-left: 15px;
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1.5em;
 }
 .left-nav {
@@ -109,7 +109,6 @@ figure {
   display: inline;
 }
 .display {
-  margin-bottom: 5%;
   padding-bottom: 5%;
   background-color: white;
   opacity: .8;

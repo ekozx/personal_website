@@ -1,4 +1,1 @@
-TODO:
-* export routes
-* add authentication
-* create posts
+Don't forget to concatinate your css files!!

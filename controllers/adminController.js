@@ -21,9 +21,22 @@ exports.createUser = function(req, res) {
 exports.createPost = function(req, res) {
   var Post = require('../models/post.js');
   console.log(req.body.post);
-  //TODO: I was here last
   var post = new Post({
     title: req.body.post.title,
-
+    subtitle: req.body.post.preview,
+    body: req.body.post.body
+  });
+  post.save(function(err, p) {
+    if (err) return res.send(500, 'Error occurred: unable to create new post');
+    var data = preparePost(p);
+    res.json({post: data});
   });
 };
+function preparePost(p) {
+  return {
+    title: p.title,
+    subtitle: p.preview,
+    body: p.body,
+    updated_at: p.updated_at,
+  };
+}
