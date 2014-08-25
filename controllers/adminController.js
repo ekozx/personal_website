@@ -7,7 +7,8 @@ exports.new = function(req, res) {
 exports.register = function(req, res) {
   res.render('register');
 };
-exports.newUser = function(req, res) {
+exports.createUser = function(req, res) {
+  var User = require('../models/user.js');
   User.register(new User({ username : req.body.username }), req.body.password, function(err, user) {
     if (err) {
       return res.render('register', { user : user });
@@ -16,4 +17,8 @@ exports.newUser = function(req, res) {
       res.redirect('/');
     });
   });
+};
+exports.createPost = function(req, res) {
+  var Post = require('../models/post.js');
+  console.log(req.body.post);
 };

@@ -12,7 +12,7 @@ module.exports = function(app, passport, express) {
 
   if (app.get('env') === 'development') {
     app.get('/register', admin.register);
-    app.post('/register', admin.newUser);
+    app.post('/register', admin.createUser);
   }
   app.get('/', projects.index);
   app.get('projects', projects.index);
@@ -24,6 +24,7 @@ module.exports = function(app, passport, express) {
     failureRedirect: '/login'
   }));
   app.get('/new', isLoggedIn, admin.new);
+  app.post('/new', isLoggedIn, admin.createPost);
 
   function isLoggedIn(req, res, next) {
     if (req.user) {
