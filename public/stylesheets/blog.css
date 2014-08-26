@@ -1,4 +1,6 @@
-.blog {
+.post {
   background-color: white;
   opacity: .8;
+  width: 75%;
+  margin: auto;
 }
