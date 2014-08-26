@@ -1,3 +1,9 @@
 exports.index = function(req, res) {
-  res.render('blog');
+  //TODO: I was here
+  Post = require('../models/post.js');
+  // console.log(Post);
+  Post.find(function(err, posts) {
+    if (err) return console.error(err);
+    res.render('blog', { posts:  posts});
+  });
 };

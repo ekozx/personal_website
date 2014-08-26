@@ -52,7 +52,7 @@ figure {
   -ms-filter: blur(5px);
   filter: blur(5px);
 }
-.container {
+.color-container {
   margin: 0 auto;
   width: 100%;
 }
@@ -70,6 +70,10 @@ figure {
   vertical-align: top;
   margin-top: 0;
   width: 50%;
+}
+.intro-header {
+  margin: auto;
+  text-align: center;
 }
 .intro-text {
   margin-right: 10%;
@@ -109,10 +113,12 @@ figure {
   display: inline;
 }
 .display {
+  margin: auto;
+  width: 100%;
   padding-bottom: 5%;
   background-color: white;
   opacity: .8;
   display: block;
   text-align: left;
-  text-rendering: optimizespeed30px
+  text-rendering: optimizespeed;
 }
