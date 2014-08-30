@@ -1,0 +1,7 @@
+article.post
+  - myImg = './public/images/' + post.picture
+  img(src=myImg)
+  - var stamp = new Date(String(post.created_at))
+  p= Number(stamp.getMonth()) + 1
+  h4= post.title
+  p= post.preview

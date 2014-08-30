@@ -2,5 +2,9 @@
   background-color: white;
   opacity: .8;
   width: 75%;
-  margin: auto;
+  margin-top: 1%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid;
+  border-radius: 10px;
 }
