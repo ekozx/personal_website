@@ -3,6 +3,7 @@ article.post
   .circle-date
     .date-text= (Number(stamp.getMonth()) + 1) + "/" + String(stamp.getFullYear()).substring(2, 4)
   - myImg = '/images/' + post.picture
-  img.articleImg(src=myImg)
-  h4= post.title
+  a(href='/single/' + post.title)
+    img.articleImg(src=myImg)
+  h3.articleTitle= post.title
   p= post.preview
