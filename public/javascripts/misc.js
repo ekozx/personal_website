@@ -9,5 +9,11 @@
     }
     $('#' + String(path)).addClass('active');
   }
+  function background() {
+    var height = $('figure').parent().height();
+    $('figure').height(height);
+  }
+
+  background();
   activeBar();
 })();

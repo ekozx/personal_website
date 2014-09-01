@@ -38,6 +38,7 @@ p {
   width: 100%;
 }
 figure {
+  display: block;
   margin: 0;
   position:absolute;
   opacity: .99;

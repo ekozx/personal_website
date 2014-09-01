@@ -1,15 +1,9 @@
 /* General Elements */
 body {
 }
-figure {
-  height: 1800px;
-}
 @media all and (max-width: 1190px) {
   body {
     background-size: auto;
-  }
-  figure {
-    height: 1800px;
   }
 }
 /* Classes */
