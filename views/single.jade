@@ -1,4 +1,11 @@
 extends layout
 
 block content
-  h1= post.title
+  .post
+    - myImg = '/images/' + post.picture
+    a(href='/single/' + post.indexTitle)
+      img.articleImg(src=myImg)
+    h1.post-title= post.title
+    blockquote
+      .preview=post.preview
+    p.body-text= post.body

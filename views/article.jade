@@ -5,5 +5,8 @@ article.post
   - myImg = '/images/' + post.picture
   a(href='/single/' + post.indexTitle)
     img.articleImg(src=myImg)
-  h3.articleTitle= post.title
-  p= post.preview
+  h3.post-title= post.title
+  blockquote
+    p.preview= post.preview
+  p.body-text= post.body.substring(0, 150) + " ..."
+  a(href='/single/' + post.indexTitle): p.more Read More
