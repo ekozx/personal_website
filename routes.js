@@ -2,7 +2,6 @@ var resume = require('./controllers/resumeController.js');
 var blog = require('./controllers/blogController.js');
 var projects = require('./controllers/projectsController.js');
 var admin = require('./controllers/adminController.js');
-var Showdown = require('showdown');
 
 module.exports = function(app, passport, express) {
   var LocalStrategy = require('passport-local').Strategy;

@@ -1,4 +1,5 @@
 var Post = require('../models/post.js');
+var Showdown = require('showdown');
 
 exports.index = function(req, res) {
   //TODO: I was here
@@ -8,9 +9,11 @@ exports.index = function(req, res) {
   });
 };
 exports.single = function(req, res) {
+  var converter = new Showdown.converter();
+
   Post.findOne({indexTitle: req.params.indexTitle}, function(err, post) {
     if (post != null) {
-      res.render('single', { post: post});
+      res.render('single', { post: post, parsedBody: converter.makeHtml(post.body) });
     } else {
       res.redirect('/404');
     }

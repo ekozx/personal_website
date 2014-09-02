@@ -14,8 +14,9 @@
   border: 1px solid;
 }
 .articleImg {
-  width: 82%;
+  width: 90%;
   height: 20%;
+  max-height: 450px;
   padding-top: 5%;
   display: block;
   margin: auto;

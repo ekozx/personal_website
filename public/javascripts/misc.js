@@ -10,6 +10,7 @@
     $('#' + String(path)).addClass('active');
   }
   function background() {
+    console.log("Adding height...");
     var height = $('figure').parent().height();
     $('figure').height(height);
   }
