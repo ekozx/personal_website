@@ -1,4 +1,5 @@
 extends layout
 
 block content
-  h1 projects
+  each post in posts
+    include ./article

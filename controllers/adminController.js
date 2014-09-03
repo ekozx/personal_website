@@ -23,7 +23,7 @@ exports.createPost = function(req, res) {
   console.log(req.body.post);
   var post = new Post({
     title: req.body.post.title,
-    indexTitle: req.body.post.title.replace(" ", "-"),
+    indexTitle: req.body.post.title.replace(/ /g, "-"),
     picture: req.body.post.picture,
     preview: req.body.post.preview,
     body: req.body.post.body

@@ -10,11 +10,21 @@
     $('#' + String(path)).addClass('active');
   }
   function background() {
-    console.log("Adding height...");
     var height = $('figure').parent().height();
+    console.log("Adding height..." + String(height));
     $('figure').height(height);
   }
+  function pushElementUp(index, element) {
+    $(element).css({"top": $(element).parent().offset().top - 20});
+  }
+  function pushDates() {
+    var dates = $('.circle-date');
+    var count = dates.length;
 
+    dates.each(pushElementUp);
+  }
+
+  pushDates();
   background();
   activeBar();
 })();
