@@ -1,4 +1,5 @@
-(function() {
+// (function() {
+window.onload = function() {
   function activeBar() {
     var path = window.location.pathname;
     console.log(path);
@@ -27,4 +28,5 @@
   pushDates();
   background();
   activeBar();
-})();
+}
+// })();
