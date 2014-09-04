@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var http = require('http');
 var app = express();
+var creds = require('./credentials.js')
 var session = require('express-session');
 
 // view engine setup
