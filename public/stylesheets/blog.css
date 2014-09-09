@@ -4,34 +4,39 @@
   margin-left: 5%;
 }
 .post {
-  overflow: hidden;
+  position: relative;
   background-color: white;
   opacity: .8;
   width: 75%;
   margin-top: 3%;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, .5);
 }
 .articleImg {
-  width: 90%;
-  height: 20%;
-  max-height: 450px;
-  padding-top: 5%;
   display: block;
-  margin: auto;
+  text-align: center;
+}
+.articleImg > img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: 450px;
 }
 .circle-date {
-  border: solid 1px;
-  left: 11%;
-  position: absolute;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
   width: 70px;
+  top: -10px;
+  left: -10px;
+  position: absolute;
   height: 70px;
   border-radius: 70px;
-  background-color: #00B7FF;
+  background-color: #3AB9E9;
+  color: white;
 }
 .date-text {
-  margin-top: 15px;
+  margin-top: 25%;
   z-index: 1;
   font-size: 20px;
   position: relative;
@@ -40,7 +45,9 @@
   top: 4px;
 }
 .post-title {
-  text-align: center;
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   font-size: 2.2em;
 }
 .preview {
@@ -49,4 +56,5 @@
 }
 .more {
   margin-left: 5%;
+  font-size: 1.5em;
 }

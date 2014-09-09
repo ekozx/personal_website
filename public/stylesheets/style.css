@@ -1,12 +1,17 @@
 /* General Elements */
 a {
-  color: #00B7FF;
+  color: #017791;
   text-decoration: none;
 }
 body {
   font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-image: url('../images/sakura.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
 }
 .social-media, .navbar {
   list-style: none;
@@ -31,7 +36,7 @@ figure {
   bottom: 0;
   left: 0;
   margin-left: 0;
-  background: #029CD4;
+  background: #017791;
   border-radius: 5em;
   position: absolute;
   content: "";
@@ -42,7 +47,7 @@ figure {
   margin: 0;
   position:absolute;
   opacity: .99;
-  background-image: url('../images/sakura.jpg');
+  background-image: url('../images/sky.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
@@ -56,6 +61,10 @@ figure {
 .color-container {
   margin: 0 auto;
   width: 100%;
+  max-width: 900px;
+}
+h1 > a {
+  font-size: 30px;
 }
 .description {
   float: right;
@@ -71,6 +80,7 @@ figure {
   vertical-align: top;
   margin-top: 0;
   width: 50%;
+  margin-bottom: 5%;
 }
 .intro-header {
   margin: auto;
@@ -87,8 +97,8 @@ figure {
   margin-left: 15%;
 }
 .me-link {
-  margin-left: 25%;
-  margin-top: 3%;
+  margin-left: 15%;
+  margin-top: 1.5%;
   z-index: 1;
   position: absolute;
 }
@@ -111,17 +121,15 @@ figure {
   display: inline-block;
   text-align: right;
 }
-.title {
-  display: inline;
-}
 .display {
-  border: 1px solid;
   margin: auto;
   width: 75%;
-  padding-bottom: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   background-color: white;
   opacity: .8;
   display: block;
   text-align: left;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, .5);
   text-rendering: optimizespeed;
 }

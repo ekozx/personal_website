@@ -14,10 +14,7 @@ body {
 .navbar > li, .social-media > li {
   display: inline;
   padding-left: 15px;
-  font-size: 28px;
+  font-size: 25px;
 }
 .navbar > li {
-}
-.display {
-  padding-top: 5%;
 }

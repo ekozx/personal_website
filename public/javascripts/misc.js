@@ -25,7 +25,7 @@ window.onload = function() {
     dates.each(pushElementUp);
   }
 
-  pushDates();
+  // pushDates();
   background();
   activeBar();
 }

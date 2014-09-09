@@ -1,11 +1,11 @@
 article.post
   - var stamp = new Date(String(post.created_at))
+  h3.post-title= post.title
+  - myImg = '/images/' + post.picture
   .circle-date
     .date-text= (Number(stamp.getMonth()) + 1) + "/" + String(stamp.getFullYear()).substring(2, 4)
-  - myImg = '/images/' + post.picture
-  a(href='/single/' + post.indexTitle)
-    img.articleImg(src=myImg)
-  h3.post-title= post.title
+  a.articleImg(href='/single/' + post.indexTitle)
+    img(src=myImg)
   blockquote
     p.preview= post.preview
   //- p.body-text= post.body.substring(0, 150) + " ..."
