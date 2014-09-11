@@ -15,7 +15,9 @@ body {
 }
 .social-media, .navbar {
   list-style: none;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
   padding: 0;
 }
 h1 {
@@ -132,4 +134,7 @@ h1 > a {
   text-align: left;
   box-shadow: 1px 3px 3px rgba(0, 0, 0, .5);
   text-rendering: optimizespeed;
+}
+.title {
+  margin-left: 20%;
 }
