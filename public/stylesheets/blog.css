@@ -51,10 +51,20 @@
   font-size: 2.2em;
 }
 .preview {
-  text-align: center;
   font-size: 1.4em;
+  margin-left: 5%;
+  color: grey;
 }
 .more {
   margin-left: 5%;
   font-size: 1.5em;
+}
+.single-img {
+  padding-top: 5%;
+}
+.post-body {
+  font-size: 1.16em;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 5%;
 }

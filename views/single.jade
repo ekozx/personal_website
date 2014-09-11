@@ -3,8 +3,8 @@ extends layout
 block content
   .post
     - myImg = '/images/' + post.picture
-    a(href='/single/' + post.indexTitle)
-      img.articleImg(src=myImg)
+    a.articleImg.single-img(href='/single/' + post.indexTitle)
+      img(src=myImg)
     h1.post-title= post.title
     blockquote
       .preview=post.preview
