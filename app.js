@@ -58,17 +58,24 @@ app.use(function(req, res, next) {
 
 // development error handler
 // will print stacktrace
-switch(app.get('env')) {
-  case 'development':
-    mongoose.connect('mongodb://localhost/personalSite');
-    break;
-  // TODO: Create and add credentials file to gitignore
-  case 'production':
-    mongoose.connect(process.env.MONGOLAB_URI);
-    break;
-  default:
-    throw new Error('Unknown execution environment: ' + app.get('env'));
-}
+// switch(app.get('env')) {
+//   case 'development':
+//     mongoose.connect('mongodb://localhost/personalSite');
+//     break;
+//   // TODO: Create and add credentials file to gitignore
+//   case 'production':
+//     mongoose.connect(process.env.MONGOLAB_URI);
+//     break;
+//   default:
+//     throw new Error('Unknown execution environment: ' + app.get('env'));
+// }
+
+var uristring =
+process.env.MONGOLAB_URI ||
+process.env.MONGOHQ_URL ||
+'mongodb://localhost/personalSite';
+
+mongoose.connect(uriString);
 
 // production error handler
 // no stacktraces leaked to user
