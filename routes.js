@@ -10,10 +10,10 @@ module.exports = function(app, passport, express) {
   passport.serializeUser(User.serializeUser());
   passport.deserializeUser(User.deserializeUser());
 
-  if (app.get('env') === 'development') {
-    app.get('/register', admin.register);
-    app.post('/register', admin.createUser);
-  }
+  // if (app.get('env') === 'development') {
+  //   app.get('/register', admin.register);
+  //   app.post('/register', admin.createUser);
+  // }
   app.get('/', projects.index);
   app.get('projects', projects.index);
   app.get('/resume', resume.index);
@@ -26,7 +26,6 @@ module.exports = function(app, passport, express) {
   app.get('/single/:indexTitle', blog.single)
   app.get('/new', isLoggedIn, admin.new);
   app.post('/new', isLoggedIn, admin.createPost);
-
 
   function isLoggedIn(req, res, next) {
     if (req.user) {
