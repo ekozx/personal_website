@@ -64,7 +64,7 @@ switch(app.get('env')) {
     break;
   // TODO: Create and add credentials file to gitignore
   case 'production':
-    mongoose.connect(creds.mongo.connectionString);
+    mongoose.connect(process.env.MONGOLAB_URI);
     break;
   default:
     throw new Error('Unknown execution environment: ' + app.get('env'));
