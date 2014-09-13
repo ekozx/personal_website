@@ -70,7 +70,7 @@ app.use(function(req, res, next) {
 //     throw new Error('Unknown execution environment: ' + app.get('env'));
 // }
 
-var uristring =
+var uriString =
 process.env.MONGOLAB_URI ||
 process.env.MONGOHQ_URL ||
 'mongodb://localhost/personalSite';
