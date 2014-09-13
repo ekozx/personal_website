@@ -1,3 +1,0 @@
-exports.mongo = {
-  "hello": "gitignore?"
-}
