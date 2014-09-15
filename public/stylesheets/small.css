@@ -11,8 +11,10 @@ and (max-device-width : 1024px)
 and (orientation : landscape) { /* STYLES GO HERE */}
 
 body {
+  font-size: 1.15em;
   background-size: auto !important;
 }
+
 /* Classes */
 .navbar {
   font-size: 45px;
@@ -24,4 +26,7 @@ body {
 }
 .me-link {
   margin-left: 15%;
+}
+h1 > a {
+  font-size: 1.7em !important;
 }
