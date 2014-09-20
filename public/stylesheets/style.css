@@ -16,6 +16,9 @@ body {
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size:cover;
+   @media (max-width: @iphone-screen) {
+        background-attachment: scroll;
+    }
 }
 .social-media, .navbar {
   list-style: none;
