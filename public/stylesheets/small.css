@@ -16,6 +16,14 @@ and (orientation : landscape) { /* STYLES GO HERE */}
 }*/
 
 /* Classes */
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*min-width: 100%;
+  min-height: 100%;*/
+  max-width: 2000px;
+}
 .navbar {
   font-size: 45px;
 }
