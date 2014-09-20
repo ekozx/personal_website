@@ -8,10 +8,14 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('../images/sakura.png');
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-
+  background-size: cover;*/
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size:cover;
 }
 .social-media, .navbar {
   list-style: none;
