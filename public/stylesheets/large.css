@@ -1,11 +1,11 @@
 /* General Elements */
 body {
 }
-@media all and (max-width: 1190px) {
+/*@media all and (max-width: 1190px) {
   body {
     background-size: auto;
   }
-}
+}*/
 /* Classes */
 .container {
 }

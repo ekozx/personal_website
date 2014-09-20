@@ -1,19 +1,19 @@
 /* General Elements */
 /*ipad portrait*/
-@media only screen
+/*@media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation: portrait)  { /* STYLES GO HERE */}
 /*ipad landscape*/
-@media only screen
+/*@media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) { /* STYLES GO HERE */}
 
-body {
+/*body {
   font-size: 1.15em;
   background-size: auto !important;
-}
+}*/
 
 /* Classes */
 .navbar {
