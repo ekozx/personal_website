@@ -1,5 +1,7 @@
 p > img {
-  max-width: 100%;
+  max-width: 70%;
+  margin: auto;
+  display: block;
 }
 .body-text {
   font-size: 1.2em;
