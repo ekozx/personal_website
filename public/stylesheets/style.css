@@ -20,6 +20,10 @@ body {
         background-attachment: scroll;
     }
 }
+pre {
+  font-size: .8em;
+  overflow: scroll;
+}
 .social-media, .navbar {
   list-style: none;
   margin-top: 0;

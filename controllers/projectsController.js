@@ -9,7 +9,7 @@ exports.index = function(req, res) {
       Post.findOne({indexTitle: "A-longer post"}, function(err, post) {
         if (post != null) {
           posts.push(post);
-          Post.findOne({indexTitle: "Markdown!"}, function(err, post) {
+          Post.findOne({indexTitle: "Zapcord"}, function(err, post) {
             if (post != null) {
               posts.push(post);
               res.render('index', { posts: posts })
