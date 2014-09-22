@@ -10,6 +10,12 @@ html
     .color-container
       a(href='/').me-link: img(src='/images/me.png').me-img
       .display
+        .description
+          ul.navbar
+            li: a(href='/', id='root') projects
+            li: a(href='/resume', id='resume')  resumé
+            li: a(href='/blog', id='blog') blog
+          p.intro-text I’m a sophomore enrolled in The Ohio State University’s computer science and engineering program. Philosophy and problem solving are my passions.
         .intro
           .left-nav
           h1: a(href='/').title Evan Kozliner
@@ -22,12 +28,6 @@ html
               span.ion-social-github
             li: a(href='/resume')
               span.ion-ios7-email
-        .description
-          ul.navbar
-            li: a(href='/', id='root') projects
-            li: a(href='/resume', id='resume')  resumé
-            li: a(href='/blog', id='blog') blog
-          p.intro-text I’m a sophomore enrolled in The Ohio State University’s computer science and engineering program. Philosophy and problem solving are my passions.
       block content
   script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
   script(src="/javascripts/misc.js")
