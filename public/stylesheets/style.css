@@ -150,6 +150,9 @@ h1 > a {
 }
 
 /*resume.css*/
+.intro-items {
+  font-size: .7em;
+}
 .col-half {
   width: 50%;
   display: inline-block;
