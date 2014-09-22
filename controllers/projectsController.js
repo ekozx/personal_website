@@ -5,9 +5,9 @@ exports.index = function(req, res) {
   Post.findOne({indexTitle: "Zapcord"}, function(err, post) {
     if (post != null) {
       posts.push(post);
-      res.render('index', { posts: posts })
+      res.render('index', { posts: posts });
     } else {
-      console.log("null post")
+      console.log("null post");
       res.redirect('/404');
     }
   });
