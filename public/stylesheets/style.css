@@ -148,3 +148,154 @@ h1 > a {
 .title {
   margin-left: 20%;
 }
+
+/*resume.css*/
+.col-half {
+  width: 50%;
+  display: inline-block;
+}
+.tab {
+  margin-left: 10%;
+}
+.resume {
+  width: 75%;
+  background-color: white;
+  opacity: .9;
+  margin: auto;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  border: solid;
+}
+.resume > h1, .resume > h2, .resume > h3, .resume > ul {
+  margin-left: 5%;
+}
+.resume > h1 {
+  /*padding-top: 5%;*/
+}
+.resume-img {
+  width: 50px;
+  height: 50px;
+}
+.resume-img-lg {
+  width: 90px;
+  height: 90px;
+}
+.resume-img-volunteer {
+  margin-left: 40px;
+  width: 100px;
+  height: 75px;
+}
+.img-circle {
+  border-radius: 150px;
+}
+.info {
+  padding-left: 10%;
+}
+.resume-img-list {
+  float: left;
+}
+.resume-list, .resume-img-list {
+  margin-top: 2%;
+  display: inline-block;
+}
+.resume-list > li, .resume-img-list > li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 1.2em;
+}
+.col-all {
+  width: 100%;
+}
+
+/*blog.css*/
+p > img {
+  max-width: 70%;
+  margin: auto;
+  display: block;
+}
+.body-text {
+  font-size: 1.2em;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.post-body > blockquote {
+  /*background: #f9f9f9;*/
+  border-left: 6px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 20px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+.post-body > blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+.post {
+  position: relative;
+  background-color: white;
+  opacity: .8;
+  width: 75%;
+  margin-top: 3%;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, .5);
+}
+.articleImg {
+  display: block;
+  text-align: center;
+}
+.articleImg > img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: 450px;
+}
+.circle-date {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+  width: 70px;
+  top: -10px;
+  left: -10px;
+  position: absolute;
+  height: 70px;
+  border-radius: 70px;
+  background-color: #3AB9E9;
+  color: white;
+}
+.date-text {
+  margin-top: 25%;
+  z-index: 1;
+  font-size: 20px;
+  position: relative;
+  display: block;
+  text-align: center;
+  top: 4px;
+}
+.post-title {
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 2.2em;
+}
+.preview {
+  font-size: 1.4em;
+  margin-left: 5%;
+  color: grey;
+}
+.more {
+  margin-left: 5%;
+  font-size: 1.5em;
+}
+.single-img {
+  padding-top: 5%;
+}
+.post-body {
+  line-height: 1.5em;
+  font-size: 1.16em;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 5%;
+}
