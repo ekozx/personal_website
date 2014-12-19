@@ -24,9 +24,16 @@ window.onload = function() {
 
     dates.each(pushElementUp);
   }
+  function emailButton() {
+    $('.ion-ios7-email').click(function (event) {
+      event.preventDefault();
+      $('.hidden-text-box').toggle();
+      $('.hidden-text-box').css('display: inline ');
+    });
+  }
 
-  // pushDates();
   background();
   activeBar();
+  emailButton();
 }
 // })();

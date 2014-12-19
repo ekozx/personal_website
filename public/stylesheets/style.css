@@ -303,3 +303,11 @@ p > img {
   margin: auto;
   padding-bottom: 5%;
 }
+.hidden-text-box {
+  margin-left: 70px;
+  cursor: default;
+  display: none;
+  position: absolute;
+  background: white;
+  border: solid 1px;
+}
