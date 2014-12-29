@@ -1,5 +1,4 @@
 (function() {
-// window.onload = function() {
   function activeBar() {
     var path = window.location.pathname;
     if (path === '/') {
@@ -29,9 +28,5 @@
       $('.hidden-text-box').css('display: inline ');
     });
   }
-
-  // background();
   activeBar();
-  emailButton();
-// }
 })();
