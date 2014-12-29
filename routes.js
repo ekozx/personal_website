@@ -14,6 +14,7 @@ module.exports = function(app, passport, express) {
   //   app.get('/register', admin.register);
   //   app.post('/register', admin.createUser);
   // }
+  app.get('/processing', projects.processing)
   app.get('/', projects.index);
   app.get('projects', projects.index);
   app.get('/resume', resume.index);

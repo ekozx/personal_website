@@ -12,3 +12,6 @@ exports.index = function(req, res) {
     }
   });
 };
+exports.processing = function(req, res) {
+  res.render('processing');
+};
