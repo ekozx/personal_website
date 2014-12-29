@@ -1,8 +1,7 @@
-// (function() {
-window.onload = function() {
+(function() {
+// window.onload = function() {
   function activeBar() {
     var path = window.location.pathname;
-    console.log(path);
     if (path === '/') {
       path = 'root';
     } else {
@@ -12,7 +11,6 @@ window.onload = function() {
   }
   function background() {
     var height = $('figure').parent().height();
-    console.log("Adding height..." + String(height));
     $('figure').height(height);
   }
   function pushElementUp(index, element) {
@@ -32,8 +30,8 @@ window.onload = function() {
     });
   }
 
-  background();
+  // background();
   activeBar();
   emailButton();
-}
-// })();
+// }
+})();
