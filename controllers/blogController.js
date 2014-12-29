@@ -2,7 +2,6 @@ var Post = require('../models/post.js');
 var Showdown = require('showdown');
 
 exports.index = function(req, res) {
-  //TODO: I was here
   Post.find(function(err, posts) {
     if (err) return console.error(err);
     res.render('blog', { posts:  posts});
