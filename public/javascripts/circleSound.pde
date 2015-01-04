@@ -17,7 +17,7 @@ void setup(){
   //this checks to see what type of audio the browser can play
   //then assigns that file extension to our string
   if (audio.canPlayType && audio.canPlayType("audio/ogg")) {
-    fileExt = ".ogg";
+    fileExt = ".wav";
   }
   else {
     fileExt = ".mp3";
@@ -31,7 +31,7 @@ void setup(){
   audio.play();
 }
 
-void draw(){
+void draw() {
   background(220);
   //constrain the R value between 0 and 255
   fill(constrain(col,0,255),0,0);
