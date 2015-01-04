@@ -1,27 +1,30 @@
 boolean dragged = false;
 
-Maxim maxim;
-AudioPlayer player;
+Audio audio = new Audio();
 float speed = 1.0;
+float vol = 1.0;
+String fileExt = ".wav";
 
 //input values
 float value = 0;
 float value_2 = 0;
 
-void setup()
-{
+void setup() {
   size( 600, 600);
-  maxim = new Maxim(this);
+  // maxim = new Maxim(this);
+  audio.setAttribute("src","../audio/beat2" + fileExt);
 
-  player = maxim.loadFile("beat1.wav");
-  player.setLooping(true);
-  player.play();
+  // player = maxim.loadFile("beat1.wav");
+  // player.setLooping(true);
+  audio.play();
+  // player.play();
+  audio.addEventListener("ended", repeat);
+  audio.volume = vol;
   noLoop();
 }
 
-void draw()
-{
-  player.speed(speed);
+void draw() {
+  // player.speed(speed);
   if(dragged)
   {
     fill(100*speed,100*speed,100*speed, 25*speed);
@@ -41,8 +44,7 @@ void draw()
   bezier(300, 300, 400+value_2, 300+-value, 400, 300+-value, 600, 300);
 }
 
-void mouseMoved()
-{
+void mouseMoved() {
   speed = map(mouseY, 0, height, 0, 2);
 
   value = mouseY - 300;
@@ -50,8 +52,7 @@ void mouseMoved()
   redraw();
 }
 
-void mouseDragged()
-{
+void mouseDragged() {
   dragged = true;
 
   value = mouseY - 300;
@@ -60,7 +61,10 @@ void mouseDragged()
   redraw();
 }
 
-void mouseReleased()
-{
+void mouseReleased() {
   dragged = false;
+}
+
+void repeat(){
+  audio.play();
 }
