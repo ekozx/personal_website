@@ -1,7 +1,7 @@
 //make a new HTML5 audio object named audio
 Audio audio = new Audio();
 // make string that will house the audio extension
-String fileExt;
+String fileExt = ".wav";
 
 //make a variable for volume and set it to 0
 //(volume runs between 0 and 1)
@@ -16,14 +16,14 @@ void setup(){
 
   //this checks to see what type of audio the browser can play
   //then assigns that file extension to our string
-  if (audio.canPlayType && audio.canPlayType("audio/ogg")) {
-    fileExt = ".wav";
-  }
-  else {
-    fileExt = ".mp3";
-  }
+  // if (audio.canPlayType && audio.canPlayType("audio/ogg")) {
+  //   fileExt = ".wav";
+  // }
+  // else {
+  //   fileExt = ".mp3";
+  // }
   //loads the audio file and appends the file extension
-  audio.setAttribute("src","beat"+fileExt);
+  audio.setAttribute("src","../audio/beat1" + fileExt);
   //this adds a listener to see when the file has finished playing
   //then calls a function that we named "repeat"
   audio.addEventListener("ended",repeat);
