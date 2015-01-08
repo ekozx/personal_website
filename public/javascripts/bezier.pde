@@ -8,7 +8,7 @@ float value = 0;
 float value_2 = 0;
 
 void setup() {
-  size( 600, 600);
+  size( 540, 540 );
   audio.setAttribute("src","../audio/beat1" + fileExt);
   noLoop();
 }
