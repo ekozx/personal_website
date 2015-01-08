@@ -1,4 +1,5 @@
 boolean dragged = false;
+boolean started = false;
 Audio audio = new Audio();
 float speed = 1.0;
 float vol = 1.0;
@@ -9,14 +10,14 @@ float value_2 = 0;
 void setup() {
   size( 600, 600);
   audio.setAttribute("src","../audio/beat1" + fileExt);
-
-  audio.play();
-  audio.addEventListener("ended", repeat);
-  audio.volume = vol;
   noLoop();
 }
 
 void draw() {
+  if(!started) {
+    vol -= .1;
+  }
+  audio.volume=constrain(vol,0,1);
   if(dragged) {
     fill(100*speed,100*speed,100*speed, 25*speed);
   } else {
@@ -49,4 +50,18 @@ void mouseReleased() {
 
 void repeat(){
   audio.play();
+}
+
+void mouseClicked() {
+  if(!started) {
+    vol = 1.0;
+    println("started");
+    audio.volume = vol;
+    audio.play();
+    audio.addEventListener("ended", repeat);
+    started = true;
+  } else {
+    println("stopped");
+    started = false;
+  }
 }
