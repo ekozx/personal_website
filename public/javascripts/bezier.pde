@@ -18,6 +18,7 @@ void draw() {
     vol -= .1;
   }
   audio.volume=constrain(vol,0,1);
+  audio.playbackRate = speed;
   if(dragged) {
     fill(100*speed,100*speed,100*speed, 25*speed);
   } else {
@@ -55,13 +56,13 @@ void repeat(){
 void mouseClicked() {
   if(!started) {
     vol = 1.0;
-    println("started");
+    println("You started audio on the bezier sine project.");
     audio.volume = vol;
     audio.play();
     audio.addEventListener("ended", repeat);
     started = true;
   } else {
-    println("stopped");
+    println("You stopped sudio on the bezier sine project.");
     started = false;
   }
 }
