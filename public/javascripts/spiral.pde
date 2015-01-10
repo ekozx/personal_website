@@ -1,6 +1,8 @@
 float theta;
-float max = 10;
-float inputLength = 50;
+float lowerBound = 10;
+float inputLength;
+float x;
+float y;
 
 void setup() {
   size(540, 540);
@@ -8,9 +10,11 @@ void setup() {
 
 void draw() {
   background(0);
-  frameRate(30);
+  frameRate(20);
   stroke(255);
-  // inputlength =
+  x = abs(mouseX - width/2);
+  y = abs(mouseY - height/2);
+  inputLength = ( constrain(x, 0, 120) + constrain(y, 0, 120) ) / 2;
   //pick an angle based on proximity to center later
   theta = radians(120);
   translate(height/2, width/2);
@@ -29,7 +33,7 @@ void draw() {
 void recurse(float length) {
   length *= .66;
 
-  if(length > max) {
+  if(length > lowerBound) {
     for(int i = 0; i < 3; i++) {
       bezier(0,0, 0, length, length, length, length, length);
       translate(length, length);
