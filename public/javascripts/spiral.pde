@@ -20,12 +20,11 @@ void draw() {
   translate(height/2, width/2);
   noFill();
   stroke(255);
-  //initial curves
-  //inputLength is a line height, make this dynamic on user input
   for(int i = 0; i < 3; i++) {
     bezier(0,0, 0, inputLength, inputLength, inputLength, inputLength, inputLength);
     translate(inputLength, inputLength);
     recurse(inputLength);
+    translate(-inputLength, -inputLength);
     rotate(theta);
   }
 }
@@ -38,6 +37,7 @@ void recurse(float length) {
       bezier(0,0, 0, length, length, length, length, length);
       translate(length, length);
       recurse(length);
+      translate(-length, -length);
       rotate(theta);
     }
   }
