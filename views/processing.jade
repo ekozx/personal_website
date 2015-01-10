@@ -2,11 +2,15 @@ extends layout
 
 block content
   article.post
-    h1.post-title processing.js projects
+    h1.post-title Processing projects
     blockquote
-      .preview Here's a compilation of my current processing projects. Any projects that I'm still changing to html5 audio I've just provided a Youtube video for. Any file referenced is within the /public/javascripts folder of this sites github page.
+      .preview Here's a compilation of my current Processing projects. Any file referenced is within the /public/javascripts folder of this sites github page.
     .post-body
       h4 bezier.pde
       p This is a short and sweet project to create a dynamic audio visualizer that. The apparent sine wave is made up of 2 bezier curves and will change position based on the location of your mouse. You can drag the screen to edit the waves themselves and click the screen for audio that changes if the mouse is dragged.
       .processing-canvas
         canvas(data-processing-sources="/javascripts/bezier.pde")
+      h4 disco.pde
+      p A disco styled audio visualizer that's without user input. The project relied on a no longer maintained processing library called maxim.js so I'm currently looking for a way to make the same project using the web audio API instead of processing because features without the API are too limited for it.
+      iframe(width="560", height="315", src="//www.youtube.com/embed/3Yll5n4tqXs?list=UUa59zSKCPeJxOxGz3httVkA", frameborder="0", allowfullscreen)
+      
