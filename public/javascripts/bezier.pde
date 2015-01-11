@@ -10,7 +10,6 @@ float value_2 = 0;
 void setup() {
   size( 540, 540 );
   audio.setAttribute("src","../audio/beat1" + fileExt);
-  noLoop();
 }
 
 void draw() {
@@ -18,13 +17,16 @@ void draw() {
     vol -= .1;
   }
   audio.volume=constrain(vol,0,1);
+  // Speed is changed based on how close the mouse is to the top of the canvas
   audio.playbackRate = speed;
+  //On drag, change the fill of the rectangle based on the mouse y position to keep the curves
   if(dragged) {
     fill(100*speed,100*speed,100*speed, 25*speed);
   } else {
     fill(0, 0, 0, 25);
   }
-  rect(0, 0, 600, 600);
+  //Draw a rectangle to cover up the old work
+  rect(0, 0, 540, 540);
   float rn = random(-500, 500);
   stroke(rn, 100, 200, 200);
   noFill();
