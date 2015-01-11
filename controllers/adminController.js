@@ -4,7 +4,7 @@ exports.login = function(req, res) {
 exports.new = function(req, res) {
   res.render('new');
 };
-//Generating users is no longer neccessary. 
+//Generating users is no longer neccessary.
 // exports.register = function(req, res) {
 //   res.render('register');
 // };
