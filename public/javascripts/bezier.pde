@@ -29,7 +29,7 @@ void draw() {
   stroke(rn, 100, 200, 200);
   noFill();
   bezier(0, 300, 200+value_2, 300+value, 200, 300+value, 300, 300);
-  bezier(300, 300, 400+value_2, 300+-value, 400, 300+-value, 600, 300);
+  bezier(300, 300, 400+value_2, 300-value, 400, 300-value, 600, 300);
 }
 
 void mouseMoved() {
