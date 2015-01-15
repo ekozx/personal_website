@@ -5,7 +5,6 @@ exports.index = function(req, res) {
   posts = [];
   for (var i = 0; i < postNames.length; i++) {
     Post.findOne({indexTitle: postNames[i]}, function(err, post) {
-      console.log(post);
       if(post != null) {
         posts.push(post);
       } else {
