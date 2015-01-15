@@ -5,7 +5,6 @@ If you're looking for the Processing projects on the site, they're under /public
 ##TODO:
 * Better code snips
 * Better README (haha)
-* Fix text size on layout.jade for mobile view
 * create mayan numerical project/post (If I'm bored)
 * Fix spelling errors (base bones in the processing one... Come on)
 * Add processing.js projects/post
