@@ -46,3 +46,9 @@ h1 > a {
 .social-media > li > a > span{
   font-size: 2em;
 }
+.tab > ul > li {
+  font-size: 1.5em;
+}
+.info > h3 {
+  font-size: 2em;
+}
