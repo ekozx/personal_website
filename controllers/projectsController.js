@@ -1,7 +1,7 @@
 var Post = require('../models/post.js');
 
 exports.index = function(req, res) {
-  postNames = ["Zapcord", "Visual-Computing-with-Processing", "Neural-Networks-and Node-JS"];
+  postNames = ["Zapcord", "Visual-Computing-with-Processing", "Neural-Networks-and-Node-JS"];
   posts = [];
   for (var i = 0; i < postNames.length; i++) {
     Post.findOne({indexTitle: postNames[i]}, function(err, post) {
